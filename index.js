@@ -1,9 +1,5 @@
 // Initialize the map centered on Africa
 var map = L.map("map").setView([1.5, 17.5], 3.5);
-// Load OpenStreetMap tiles
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap contributors",
-}).addTo(map);
 // Define locations & success stories for African environmentalism
 var locations = [
   {
@@ -37,6 +33,10 @@ var locations = [
       "Indigenous communities protect forests due to spiritual significance, creating biodiversity hotspots and natural climate solutions.",
   },
 ];
+// Load OpenStreetMap tiles
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
+}).addTo(map);
 // Add markers for each location
 locations.forEach(function (location) {
   var marker = L.marker(location.coords).addTo(map);
