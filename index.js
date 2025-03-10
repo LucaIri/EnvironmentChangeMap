@@ -33,12 +33,12 @@ var locations = [
       "Indigenous communities protect forests due to spiritual significance, creating biodiversity hotspots and natural climate solutions.",
   },
 ];
-// Load OpenStreetMap tiles
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "© OpenStreetMap contributors",
-}).addTo(map);
 // Add markers for each location
 locations.forEach(function (location) {
   var marker = L.marker(location.coords).addTo(map);
   marker.bindPopup(`<h3>${location.name}</h3><p>${location.description}</p>`);
 });
+// Load OpenStreetMap tiles
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
+}).addTo(map);
