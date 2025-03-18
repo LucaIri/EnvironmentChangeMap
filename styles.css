@@ -10,6 +10,15 @@ p {
     margin: 10px;
 }
 
+.instagram-media {
+    max-width: 100%;
+    overflow: hidden;
+}
+.instagram-media .e1e1d {
+    display: none; /* Hides the caption */
+}
+
+
 #map {
     height: 500px;
     width: 90%;
